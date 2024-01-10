@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar numero maior</title>
+    <link rel="stylesheet" href="./main.css" />
+</head>
+<header>
+    <div class="container">
+        <h1>Comparador de Números</h1>
+    </div>
+</header>
+<body>
+    <div class="container">
+        <form id="FormComparador">
+            <h2>Informe o valor A (numero menor)</h2>
+            <INPUT id="NumeroA" type="NUMBER" required placeholder=" Informe o primeiro número" />
+            <h2>Informe o valor B (numero maior)</h2>
+            <INPUT id="NumeroB" type="NUMBER" required placeholder=" Informe o segundo número" />
+            <br>
+            <button title="Comparar nuemros" type="submit">Comparar</button>
+            <p class="erro">
+                O valor <b>"B"</b> é menor que o Valor <b>"A"</b>
+            </p>
+            <p class="sucesso">
+                O valor <b>"B"</b> é maior que o Valor <b>"A"</b>
+            </p>
+        </form>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
