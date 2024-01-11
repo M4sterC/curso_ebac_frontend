@@ -1,36 +1,34 @@
 const form = document.getElementById ('FormComparador')
-const ValorA = document.getElementById ('NumeroA')
-const ValorB = document.getElementById('NumeroB')
-let BEMaior = false
-
 
 function BMairoQueA(ValorA,ValorB) {
-    const EMaior = ValorB > ValorA
-    return EMaior
+    return ValorA < ValorB
 }
 
 form.addEventListener('submit', function(e){
     e.preventDefault()
-
-    const MensagemSucesso = `SUCESSO: O número <b>${ValorB.value}</b> é maior que o número <b>${ValorA.value}</b>`
-    const MensagemErro = `ERRO: O número <b>${ValorB.value}</b> é menor que o número <b>${ValorA.value}</b>`
+    const ValorA2 = document.getElementById ('NumeroA')
+    const ValorB2 = document.getElementById('NumeroB')
+    const ValorA = parseInt(ValorA2.value)
+    const ValorB = parseInt(ValorB2.value)
+    let BEMaior = false
+    const MensagemSucesso = `SUCESSO: O número <b>${ValorB}</b> é maior que o número <b>${ValorA}</b>`
+    const MensagemErro = `ERRO: O número <b>${ValorB}</b> é menor que o número <b>${ValorA}</b>`
     const ContainerMensagemSucesso = document.querySelector('.sucesso')
-    ContainerMensagemSucesso.innerHTML = MensagemSucesso
     const ContainerMensagemErro = document.querySelector('.erro')
-    ContainerMensagemErro.innerHTML = MensagemErro
 
-    BEMaior = BMairoQueA(ValorA.value,ValorB.value)
+
+    BEMaior = BMairoQueA(ValorA,ValorB)
     if (BEMaior) {
+        ContainerMensagemSucesso.innerHTML = MensagemSucesso
         ContainerMensagemSucesso.style.display = 'block'
         ContainerMensagemErro.style.display = 'none'
-
-        ValorA.value = ''
-        ValorB.value = ''
+        ValorA2.value = ""
+        ValorB2.value = ""
     }else {
+    ContainerMensagemErro.innerHTML = MensagemErro
     ContainerMensagemErro.style.display = 'block'
     ContainerMensagemSucesso.style.display = 'none'
-
-    ValorA.value = ''
-    ValorB.value = ''
+    ValorA2.value = ""
+    ValorB2.value = ""
     }
 })
