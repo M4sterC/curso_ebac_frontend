@@ -5,20 +5,31 @@
     font-family: 'Roboto', sans-serif;
 }
 body {
-    background-color: darkgray;
+    background-color: rgb(129, 116, 116);
 }
 .container {
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
 }
-
 header {
+    color: rgb(76,41,41);
     text-align: center;
-    margin: 36px 0;
+    margin: 16px 0;
+}
+header h1 {
+    font-weight: bold;
+    font-family:cursive;
 }
 form {
     text-align: center;
+}
+.form {
+    background-color: rgb(234, 160, 160);
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 8px;
 }
 form .container {
     margin-bottom: 16px;
@@ -29,14 +40,16 @@ form input {
     border: none;
     padding: 0 8px;
     color: black;
-    border-radius: 6px;
+    border-radius: 12px;
     height: 32px;
     width: 100%;
 }
 form #label {
-    display: block;
-    margin-bottom: 8px;
-    background-color: #FFF;
+    color: rgb(76, 41, 41);
+    font-weight: bold;
+    padding: 8px 0 ;
+    text-transform: uppercase;    
+    display: flex;
     border-radius: 8px;
 }
 button {
@@ -56,6 +69,8 @@ label {
     display: flex;
     margin-top: 4px;
     font-weight: bold;
-    padding: 8px;
+    padding-top: 8px;
     text-transform: uppercase;
+    font-size: 12px;
+    color: red;
 }
